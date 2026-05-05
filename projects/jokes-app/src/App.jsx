@@ -55,30 +55,38 @@ export default function App() {
     }
   };
 
-  // 🔥 Smart pagination logic
-  const getPages = () => {
-    const pages = [];
-    const delta = 2;
+const getPages = () => {
+  const pages = [];
+  const delta = 2;
 
-    const left = Math.max(1, page - delta);
-    const right = Math.min(totalPages, page + delta);
+  const left = Math.max(2, page - delta);
+  const right = Math.min(totalPages - 1, page + delta);
 
-    if (left > 1) {
-      pages.push(1);
-      if (left > 2) pages.push("...");
-    }
+  // Always include first page
+  pages.push(1);
 
-    for (let i = left; i <= right; i++) {
-      pages.push(i);
-    }
+  // Left dots
+  if (left > 2) {
+    pages.push("...");
+  }
 
-    if (right < totalPages) {
-      if (right < totalPages - 1) pages.push("...");
-      pages.push(totalPages);
-    }
+  // Middle pages
+  for (let i = left; i <= right; i++) {
+    pages.push(i);
+  }
 
-    return pages;
-  };
+  // Right dots
+  if (right < totalPages - 1) {
+    pages.push("...");
+  }
+
+  // Always include last page (if more than 1)
+  if (totalPages > 1) {
+    pages.push(totalPages);
+  }
+
+  return pages;
+};
 
   const pages = getPages();
 
