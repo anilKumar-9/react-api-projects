@@ -6,7 +6,7 @@ The Jokes Viewer Application is a React-based web application that fetches jokes
 
 ## Live Demo
 
-[Vercel Link: ](https://react-api-projects-17jqae1of-anilkumar-9s-projects.vercel.app/)
+[Vercel Link: ]([https://react-api-projects-17jqae1of-anilkumar-9s-projects.vercel.app/])
 
 ## GitHub Repository
 
