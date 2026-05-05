@@ -3,7 +3,7 @@
 A React-based application that fetches and displays user data in a clean and responsive card layout.
 
 ## Live Demo
-https://random-users-ja3od02ql-anilkumar-9s-projects.vercel.app/
+https://random-users-ui-rosy.vercel.app/
 
 ## Features
 - Fetch users from FreeAPI
